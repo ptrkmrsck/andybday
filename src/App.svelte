@@ -1,22 +1,14 @@
 <script>
 	import Pix from "./pix.svelte"
+	let pixs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 </script>
 
 <main>
 	<h1>hbd champion!</h1>
 	<div class=container>
-		<Pix />
-		<Pix />
-		<Pix />
-		<Pix />
-		<Pix />
-		<Pix />
-		<Pix />
-		<Pix />
-		<Pix />
-		<Pix />
-		<Pix />
-		<Pix />
+		{#each pixs as pix}
+			<Pix />
+		{/each}
 	</div>
 </main>
 
@@ -33,12 +25,13 @@
 	}
 	.container {
 		display: grid;
-		grid-template-columns:  1fr 1fr 1fr;
+		grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
 		border: 1px solid red;
+		max-height: 80%;
 	}
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
+	@media (max-width: 640px) {
+		.container{
+			grid-template-columns:  1fr 1fr 1fr;
 		}
 	}
 </style>
