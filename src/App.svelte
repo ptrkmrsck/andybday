@@ -26,7 +26,7 @@
 	.container {
 		display: grid;
 		grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
-		border: 1px solid red;
+		/* border: 1px solid red; */
 		max-height: 80%;
 	}
 	@media (max-width: 640px) {
